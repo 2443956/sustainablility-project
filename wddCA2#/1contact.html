@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!--Prestons page 2-->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>more info</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="1.html">Back</a></li>
+                <li><a href="2.html">End hunger</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+	 <section>
+	 <h2>Where to find more information</h2>
+	 <p>for more information about the UN's 17 sustainable development goals click <a href="https://sdgs.un.org/goals">here</a></p>
+     </section>
+
+	
+	
+	
+        <section>
+            <h2>Leave a comment</h2>
+             <form id="contactForm1">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+	<div id="confirmationMessage">Comment submitted!</div>
+        </section>
+        
+    </main>
+    <footer>
+    </footer>
+   <script>
+        document.getElementById('contactForm1').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields.');
+            } else {
+                document.getElementById('contactForm1').style.display = 'none';
+                document.getElementById('confirmationMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
